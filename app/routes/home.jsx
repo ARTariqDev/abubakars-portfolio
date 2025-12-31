@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Code, Trophy, Briefcase, BookOpen, Zap, Terminal, Star, Github, Linkedin, Mail, Coffee } from 'lucide-react';
+import { Code, Trophy, Briefcase, BookOpen, Zap, Terminal, Star, Github, Linkedin, Mail, Coffee, Link } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [terminalText, setTerminalText] = useState('');
-  const fullText = 'Curriculum Vitae: Muhammad Abubakar';
+  const fullText = 'APPLICATION SUPPORTING MATERIALS: Muhammad Abubakar';
 
   useEffect(() => {
     let index = 0;
@@ -19,34 +19,223 @@ const Portfolio = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const experiences = [
+  const activities = [
     {
-      title: 'President',
-      company: 'Pakathon',
-      period: 'January 2025 – Present',
-      description: 'Leading organizational initiatives and strategic development',
-      icon: <Zap className="w-5 h-5" />
+      title: 'Founder & President',
+      company: 'Pakathon × LGS JT IT Society',
+      period: '2023 – Present',
+      icon: <Zap className="w-5 h-5" />,
+      overview: "Pakathon is a multi-year computer science education and hackathon initiative designed to introduce secondary-level students to foundational programming and computational thinking. The program combines scaffolded instruction, peer-led teaching, and project-based problem solving, with the goal of lowering entry barriers to technical learning in a school context where formal CS exposure is uneven.",
+      responsibilities: ["Founded and led the initiative from conception to execution", "Authored a scaffolded modular introductory computer science curriculum, structured to move students from basic syntax and logic to applied problem-solving and projects", "Designed and implemented a peer-instructor model", "Planned and executed hackathon-style learning events to reinforce instruction through collaborative, time-bound project work"],
+      scope: ["Reached 300+ students across multiple cohorts and academic years", "Trained 40+ peer instructors responsible for small-group teaching and mentorship", "Operated as a sustained, multi-year initiative rather than a one-off workshop or competition"],
+      evidence: [{
+          label: "Curriculum documents and lesson materials",
+          link: "#"
+        },
+        {
+          label: "Photographs from instructional sessions and hackathon events",
+          link: "#"
+        },
+        {
+          label: "Event Recap Video (Recommended Watch :P)",
+          link: "#"
+        }
+      ]
     },
     {
-      title: 'Model United Nations Coach',
-      company: 'Lahore Grammar School',
-      period: 'August 2024 – Present',
-      description: 'Pedagogical instruction in international relations and diplomatic discourse',
-      icon: <BookOpen className="w-5 h-5" />
+      title: 'Illusion of Mastery Project (Self-Directed)',
+      company: 'Founder & Researcher',
+      period: 'August 2025',
+      icon: <BookOpen className="w-5 h-5" />,
+      overview: "The Illusion of Mastery Project is a self-directed research effort examining mismatches between learner confidence and actual understanding in AI-assisted and human-guided instructional contexts. The project focuses on how misconceptions persist, particularly when learners appear fluent or confident, and how feedback timing and tool-mediated assistance shape transfer and error correction.",
+      responsibilities: ["Designed and executed an independent research framework to study confidence–competence gaps in learning", "Constructed a longitudinal archive of anonymized learner errors drawn from both AI-assisted and human-guided instruction", "Tracked confidence indicators alongside performance to identify patterns of overconfidence, transfer failure, and misconception persistence", "Analyzed how feedback timing and perceived AI fluency influence learners’ willingness to revise incorrect mental models", "Refined analytical framing through design-review–style discussions with a senior software engineer"],
+      scope: ["Multi-context dataset spanning repeated learner interactions over time", "Longitudinal analysis focused on error persistence rather than one-off performance"],
+      evidence: [{
+        label: "Dataset schema and anonymization protocol",
+        link: "#"
+      },
+    {
+      label: "Coding framework for error and confidence classification",
+      link: "#"
+    },
+  {
+    label: "Analytical notes and draft manuscript excerpts",
+    link: "#"
+  }]
     },
     {
-      title: 'Co-Chief Executive Officer',
-      company: 'Inkdrop',
-      period: 'March 2024 – January 2025',
-      description: 'Executive leadership and operational management',
-      icon: <Briefcase className="w-5 h-5" />
+      title: 'Published Research',
+      company: 'Journal of Applied Linguistics and TESOL (JALT)',
+      period: 'November 2025',
+      icon: <Briefcase className="w-5 h-5" />,
+      overview: "This published research examines how AI-mediated learning environments shape learner confidence and understanding. Drawing on theories of productive struggle and desirable difficulty, the paper analyzes how fluent AI output and instant feedback can create a sense of cognitive ease that accelerates performance while weakening the processes required for durable learning.",
+      responsibilities: ["Developed the central research question examining confidence–competence gaps in AI-assisted learning", "Conducted theoretical analysis connecting learning science, cognitive load, and AI-mediated instruction", "Analyzed how fluent output and shortcut explanations affect transfer, effort, and misconception persistence", "Authored the manuscript through iterative drafting and revision under academic mentorship"],
+      scope: ["Peer-reviewed publication in an applied linguistics and TESOL journal", "Theoretical and analytical study grounded in existing learning science research"],
+      evidence: [
+        {
+          label: "Published paper (Journal of Applied Linguistics and TESOL)",
+          link: "/assets/JALT+290.pdf"
+        },
+        {
+          label: "Abstract and citation information",
+          link: "https://jalt.com.pk/index.php/jalt/article/view/1560"
+        },
+      ]
     },
     {
-      title: 'Lead Programmer',
-      company: 'Broken Cookie Studios',
-      period: 'August 2020 – January 2021',
-      description: 'Software architecture and computational implementation',
-      icon: <Code className="w-5 h-5" />
+      title: 'Markaz-e-Tafakkur (Centre for Thought)',
+      company: 'Founder',
+      period: 'August 2022 - January 2024',
+      icon: <Code className="w-5 h-5" />,
+      overview: "Markaz-e-Tafakkur is a student-led civic education initiative designed to facilitate structured dialogue on contested social and ethical issues. The program emphasized disciplined disagreement, narrative framing, and sustained engagement over consensus, creating space for participants to articulate positions, test assumptions, and remain in conversation across ideological divides.",
+      responsibilities: ["Designed the initiative’s discussion architecture, defining rules for turn-taking, challenge, and response", "Developed structured session formats to separate clarification from disagreement", "Moderated large-group discussions and enforced procedural fairness across viewpoints", "Organized participant recruitment, onboarding, and session logistics", "Led the production of a short student-led documentary synthesizing themes, participant narratives, and discussion outcomes"],
+      scope: ["500+ student participants across multiple sessions", "Program conducted over sustained cycles rather than one-off events"],
+      evidence: [
+        {
+          label: "Session outlines and facilitation guides",
+          key: "#"
+        },
+        {
+          label: "Session photographs",
+          key: "#"
+        },
+        {
+          label: "Documentary final cut",
+          key: "#"
+        }
+      ]
+        
+    },
+    {
+      title: 'NASA Vitalis Project',
+      company: 'Student Researcher (NLP & Scientific Text Analysis)',
+      period: 'August 2024',
+      icon: <Code className="w-5 h-5" />,
+      overview: "This independent research project analyzes expert-written scientific texts from the NASA research database to model how domain knowledge is encoded, structured, and internally organized. The work contrasts expert knowledge representations with learner misconceptions studied in my Illusion of Mastery project, using expert literature as a high-density reference point for how understanding appears when it is well-formed rather than misperceived.",
+      responsibilities: ["Selected and curated expert-authored scientific texts from the publicly available NASA research database", "Built NLP pipelines to process, segment, and analyze technical scientific language", "Mapped conceptual relationships and thematic structure across texts to model how expert knowledge is organized", "Conducted comparative analysis between expert knowledge structures and learner error patterns identified in parallel research"],
+      scope: ["Corpus of 600+ expert-written scientific papers", "Focus on large-scale structural and conceptual analysis rather than single-text interpretation"],
+      evidence: [
+        {
+          label: "Code excerpts and pipeline diagrams",
+          link: "#"
+        },
+        {
+          label: "Documentation of preprocessing and analysis methods",
+          link: "#"
+        },
+        {
+          label: "Sample outputs illustrating concept mapping and structural patterns",
+          link: "#"
+        }
+      ]
+    },
+    {
+      title: 'Launchpad',
+      company: 'Co-Founder & Developer',
+      period: 'November 2025',
+      icon: <Code className="w-5 h-5" />,
+      overview: "Launchpad is an AI-assisted decision-support and guidance tool designed to help students navigate college application requirements across regions and systems. The platform focuses on reducing informational and cognitive overload, particularly for students without access to private counseling, by organizing requirements, timelines, and choices rather than predicting admissions outcomes.",
+      responsibilities: ["Co-designed the system architecture and user flow for a guidance-first admissions support tool", "Implemented AI-assisted features to organize application requirements, deadlines, and decision pathways across regions", "Explicitly constrained the system to avoid predictive or ranking-based admissions outputs", "Iterated on platform design based on user testing and hackathon feedback"],
+      scope: ["Evaluated in competitive hackathon settings; ranked Top-5 globally and 1st nationally", "Covered application requirements across multiple regions and admissions systems (e.g., U.S., U.K., international pathways)", "Modeled application timelines, document dependencies, and decision points across divergent systems", "Designed with a primary focus on students without access to private college counseling"],
+      evidence: [
+        {
+          label: "Hackathon certificates and rankings (Top-5 global; 1st nationally)",
+          link: "#"
+        },
+        {
+          label: "Platform demo video",
+          link: "#"
+        },
+        {
+          label: "Devpost link",
+          link: "#"
+        }
+      ]
+    },
+    {
+      title: 'National WSDC & MUN Circuits',
+      company: 'National Debater, Chair & Coach (Paid)',
+      period: 'August 2021 – Present',
+      icon: <Code className="w-5 h-5" />,
+      overview: "Sustained participation in national parliamentary debate and Model United Nations circuits as a competitor, adjudicator, chair, mentor, and paid coach. My involvement spans training, competitive preparation, and institutional governance, with a focus on argument construction, reasoning under time pressure, and procedural fairness.",
+      responsibilities: ["Competed nationally in parliamentary debate and MUN conferences", "Served as a paid coach at one of the top school chains in the country, training students in argument structure, weighing, and strategic rebuttal", "Coached teams for competitive conferences, focusing on reasoning heuristics rather than scripted cases", "Chaired and adjudicated committees, managing procedure, moderation, and resolution drafting", "Mentored junior debaters through structured feedback and post-round analysis"],
+      scope: ["Trained 50+ debaters across multiple institutions", "Coached teams to 10+ national titles and speaker awards", "Chaired or adjudicated 20+ conferences at varying levels", "Engagement spanning multiple debate formats (WSDC-style debate and MUN)"],
+      evidence: [
+        {
+          label: "Appointment Letter",
+          link: "#"
+        }
+      ]
+    },
+    {
+      title: 'LGS Robotics Society',
+      company: 'Founder & Lead Mentor',
+      period: 'August 2022 - January 2024',
+      icon: <Code className="w-5 h-5" />,
+      overview: "The LGS Robotics Society is the school’s first engineering and robotics program, created to introduce students to embedded systems and project-based hardware development. The society emphasized hands-on learning through structured instruction and iterative build cycles rather than competition-only participation.",
+      responsibilities: ["Founded the society and established its instructional and project structure", "Designed a scaffolded C++–Arduino curriculum for beginners with no prior programming experience", "Led weekly instructional sessions and supervised hands-on build work", "Mentored students through iterative project cycles, including debugging, testing, and refinement", "Coordinated equipment use, project timelines, and peer collaboration"],
+      scope: ["Grew the society from 0 to 50+ active student members across cohorts", "Multi-week instructional cycles culminating in hardware projects", "Consistently winning in local robotics competitions"],
+      evidence: [
+        {
+          label: "Curriculum outlines and lesson materials",
+          link: "#"
+        },
+        {
+          label: "Photographs of student-built projects",
+          link: "#"
+        },
+        {
+          label: "Program documentation or school acknowledgment",
+          link: "#"
+        }
+      ]
+    },
+    {
+      title: 'Jamia Program',
+      company: 'Degree Candidate (Arabic & Islamic Sciences)',
+      period: 'Ongoing',
+      icon: <Code className="w-5 h-5" />,
+      overview: "The Jamia Program is a degree-granting, exam-based post-secondary course of study in Arabic and Islamic sciences, certified by Pakistan’s Higher Education Commission (HEC). The curriculum centers on classical Arabic, logic, Qur’anic exegesis (tafsir), and Islamic legal theory, assessed through formal, cumulative examinations comparable to undergraduate-level study.",
+      responsibilities: ["Completed structured coursework and examinations in classical Arabic, logic, tafsir, and Islamic legal theory", "Conducted close textual analysis of primary sources, emphasizing precision in language, interpretation, and argumentation", "In parallel, designed and taught curricula in Qur’an and classical Arabic for independent students", "Coached learners in reading comprehension, grammatical analysis, and interpretive reasoning"],
+      scope: ["Bachelor’s-level examinations completed (January 2026)", "24 advanced classical texts completed as part of the curriculum", "Taught 60+ students across five countries through parallel instructional work"],
+      evidence: [
+        {
+          label: "Degree and Examination Documents",
+          link: "#"
+        },
+        {
+          label: "Reading list of completed texts",
+          link: "#"
+        },
+        {
+          label: "Teaching materials and curricula",
+          link: "#"
+        },
+        {
+          label: "Online class recordings",
+          link: "#"
+        }
+      ]
+    },
+    {
+      title: 'Deputy Head Boy',
+      company: 'Lahore Grammar School (LGS)',
+      period: 'August 2022 - May 2023',
+      icon: <Code className="w-5 h-5" />,
+      overview: "As Deputy Head Boy, I operated at the intersection of student governance, discipline, and dialogue. Beyond coordinating committees and events, the role involved managing conflict, translating student concerns into institutional processes, and designing mechanisms for resolving disagreement without escalation. I treated leadership less as representation and more as responsibility: creating structures that allowed issues to surface, be examined carefully, and be addressed with procedural fairness.",
+      responsibilities: ["Served as second-in-command within the student leadership body, coordinating across multiple committees", "Oversaw the work of five student committees, setting agendas and monitoring execution", "Founded Nadwat-ul-Talaba, a dialogue-based mediation forum to address disciplinary and interpersonal disputes", "Worked with school administration to resolve student issues through structured discussion rather than punitive escalation", "Led planning and execution of major school events, including academic, cultural, and formal programs"],
+      scope: ["Represented and coordinated across a student body of 1,000+ students", "Oversaw five standing committees", "Achieved a 45% reduction in disciplinary demerits through mediation-based intervention", "Organized and supervised 10+ large-scale school events"],
+      evidence: [
+        {
+          label: "Appointment",
+          link: "#"
+        },
+        {
+          label: "Event programs and administrative acknowledgments",
+          link: "#"
+        }
+      ]
+
     }
   ];
 
@@ -95,7 +284,7 @@ const Portfolio = () => {
           </div>
           <div className="flex gap-1">
             <NavButton section="home" icon={Terminal} label="Overview" />
-            <NavButton section="experience" icon={Briefcase} label="Experience" />
+            <NavButton section="Activities" icon={Briefcase} label="Activities" />
             <NavButton section="skills" icon={Code} label="Competencies" />
             <NavButton section="achievements" icon={Trophy} label="Distinctions" />
           </div>
@@ -132,14 +321,15 @@ const Portfolio = () => {
                         Muhammad Abubakar
                       </h1>
                       <p className="text-xl text-white/80 italic text-center md:text-left border-t border-white/20 pt-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-                        Computational Sciences • Cognitive Research • Islamic Scholarship
+                        Academic work and project documentation
                       </p>
                     </div>
                     
                     <div className="prose prose-invert max-w-none">
                       <p className="text-white/90 leading-relaxed text-justify" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                        An interdisciplinary scholar pursuing concurrent studies in computational sciences and traditional Islamic scholarship. Currently undertaking A-Level coursework in mathematics, physics, and computer science whilst simultaneously completing dual Master's degrees in Islamic Sciences and Classical Arabic Language—demonstrating a commitment to synthesizing technical expertise with humanistic inquiry.
-                      </p>
+This site documents academic, research, and organizational work referenced in my college applications. It includes project descriptions, timelines, and supporting materials.
+
+I am currently completing A-Level coursework in mathematics, physics, and computer science, alongside advanced studies in Islamic sciences and classical Arabic. My work includes technical education initiatives, debate and civic education programs, and independent research projects.                       </p>
                     </div>
                     
                     <div className="flex gap-4 justify-center md:justify-start pt-4 border-t border-white/20">
@@ -158,35 +348,12 @@ const Portfolio = () => {
               </div>
 
               {/* Academic Metrics */}
-              <div className="grid md:grid-cols-2 gap-8">
+              
+              
+                
                 <div className="border border-white/20 p-8">
                   <h3 className="text-2xl mb-6 text-white border-b border-white/20 pb-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
-                    Academic Profile
-                  </h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center p-4 border border-white/10">
-                      <div className="text-5xl text-white mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>10</div>
-                      <div className="text-sm text-white/70" style={{ fontFamily: '"Times New Roman", Times, serif' }}>A* & A Grades</div>
-                    </div>
-                    <div className="text-center p-4 border border-white/10">
-                      <div className="text-5xl text-white mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>5</div>
-                      <div className="text-sm text-white/70" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Languages</div>
-                    </div>
-                    <div className="text-center p-4 border border-white/10">
-                      <div className="text-5xl text-white mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>4</div>
-                      <div className="text-sm text-white/70" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Leadership Roles</div>
-                    </div>
-                    <div className="text-center p-4 border border-white/10">
-                      <div className="text-5xl text-white mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>2</div>
-                      <div className="text-sm text-white/70" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Master's Degrees</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border border-white/20 p-8">
-                  <h3 className="text-2xl mb-6 text-white border-b border-white/20 pb-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
-                    Research Interests
-                  </h3>
+Areas of Academic Interest                  </h3>
                   <ul className="space-y-4 text-white/90" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem' }}>
                     <li className="flex items-start gap-3">
                       <span className="text-white mt-1">•</span>
@@ -207,37 +374,119 @@ const Portfolio = () => {
                   </ul>
                 </div>
               </div>
-            </div>
           )}
 
-          {/* Experience Section */}
-          {activeSection === 'experience' && (
-            <div className="space-y-10 animate-fade-in">
-              <h2 className="text-5xl mb-10 text-white border-b border-white/20 pb-4" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
-                Professional Experience
-              </h2>
-              <div className="space-y-8">
-                {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="border border-white/20 p-8 hover:border-white/40 transition-all"
-                  >
-                    <div className="flex items-start gap-6">
-                      <div className="p-4 border border-white/30 text-white">
-                        {exp.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl text-white mb-2" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>{exp.title}</h3>
-                        <p className="text-white/90 mb-2 text-lg" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{exp.company}</p>
-                        <p className="text-sm text-white/60 italic mb-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{exp.period}</p>
-                        <p className="text-white/80 leading-relaxed text-justify" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem', lineHeight: '1.7' }}>{exp.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* Activities Section */}
+{activeSection === 'Activities' && (
+  <div className="space-y-10 animate-fade-in">
+    <h2
+      className="text-5xl mb-10 text-white border-b border-white/20 pb-4"
+      style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}
+    >
+      Activities
+    </h2>
+
+    <div className="space-y-8">
+      {activities.map((exp, index) => (
+        <div
+          key={index}
+          className="border border-white/20 p-8 hover:border-white/40 transition-all"
+        >
+          <div className="flex items-start gap-6">
+            <div className="p-4 border border-white/30 text-white">
+              {exp.icon}
             </div>
-          )}
+
+            <div className="flex-1">
+              {/* Title */}
+              <h3
+                className="text-2xl text-white mb-1"
+                style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}
+              >
+                {exp.title}
+              </h3>
+
+              <p
+                className="text-white/90 text-lg"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
+                {exp.company}
+              </p>
+
+              <p
+                className="text-sm text-white/60 italic mb-6"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
+                {exp.period}
+              </p>
+
+              {/* Overview */}
+              {exp.overview && (
+  <>
+    <p className="text-white/60 text-sm mb-1">overview</p>
+    <p className="text-white/80 mb-5 leading-relaxed">
+      {exp.overview}
+    </p>
+  </>
+)}
+
+
+              {/* Responsibilities */}
+              {Array.isArray(exp.responsibilities) && exp.responsibilities.length > 0 && (
+  <>
+    <p className="text-white/60 text-sm mb-1">responsibilities</p>
+    <ul className="list-disc list-inside text-white/80 mb-5 space-y-1">
+      {exp.responsibilities.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </>
+)}
+
+
+              {/* Scope & Scale */}
+              {Array.isArray(exp.scope) && exp.scope.length > 0 && (
+  <>
+    <p className="text-white/60 text-sm mb-1">scope & scale</p>
+    <ul className="list-disc list-inside text-white/80 mb-5 space-y-1">
+      {exp.scope.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </>
+)}
+
+              {/* Evidence */}
+              {Array.isArray(exp.evidence) && exp.evidence.length > 0 && (
+  <>
+    <p className="text-white/60 text-sm mb-1">evidence</p>
+    <ul className="list-disc list-inside text-white/80 space-y-1">
+      {exp.evidence.map((item, i) => (
+        <li key={i} className="flex items-start gap-2">
+  <Link className="w-4 h-4 mt-1 text-white/70 flex-shrink-0" />
+  <a
+    href={item.link}
+    className="font-semibold underline underline-offset-4 hover:text-white transition-colors"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {item.label}
+  </a>
+</li>
+
+      ))}
+    </ul>
+  </>
+)}
+
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
 
           {/* Skills Section */}
           {activeSection === 'skills' && (
