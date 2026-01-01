@@ -262,24 +262,24 @@ const Portfolio = () => {
   const NavButton = ({ section, icon: Icon, label }) => (
     <button
       onClick={() => setActiveSection(section)}
-      className={`flex items-center gap-2 px-5 py-2.5 transition-all ${
+      className={`group flex items-center gap-2 px-5 py-2.5 transition-colors rounded-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
         activeSection === section
-          ? 'text-white underline underline-offset-8 decoration-2'
-          : 'text-gray-400 hover:text-white'
+          ? 'text-gray-900 bg-gray-100 font-medium underline underline-offset-8 decoration-2 decoration-gray-800'
+          : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 hover:underline hover:underline-offset-8 hover:decoration-gray-800'
       }`}
-      style={{ fontFamily: '"Times New Roman", Times, serif' }}
+      style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}
     >
-      <Icon className="w-4 h-4" />
+      <Icon className="w-4 h-4 text-gray-600 group-hover:text-gray-900" />
       <span className="hidden md:inline">{label}</span>
     </button>
   );
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f3', color: '#111827', fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '16px', lineHeight: 1.7 }}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black border-b border-white/20 z-50">
+      <nav className="fixed top-0 w-full bg-[#f3f4f6] border-b border-gray-300 shadow-sm z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-lg text-white tracking-wide" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+          <div className="text-lg tracking-wide" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', color: '#1f2937', fontWeight: '500' }}>
             Muhammad Abubakar
           </div>
           <div className="flex gap-1">
@@ -299,9 +299,9 @@ const Portfolio = () => {
           {activeSection === 'home' && (
             <div className="space-y-12 animate-fade-in">
               {/* Header */}
-              <div className="border border-white/20 p-10">
+              <div className="border border-gray-300 p-10 bg-gray-50 rounded-lg shadow-sm">
                 <div className="text-center mb-8">
-                  <p className="text-sm uppercase tracking-widest text-white/70 mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                  <p className="text-sm uppercase tracking-widest text-gray-600 mb-6" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
                     {terminalText}<span className="animate-pulse">|</span>
                   </p>
                 </div>
@@ -311,36 +311,36 @@ const Portfolio = () => {
                     <img 
                       src="/avatar.jpeg"
                       alt="Muhammad Abubakar"
-                      className="w-40 h-40 border-2 border-white object-cover"
+                      className="w-40 h-40 border-2 border-gray-400 object-cover"
                     />
                   </div>
                   
                   <div className="flex-1 space-y-6">
                     <div>
-                      <h1 className="text-6xl md:text-7xl text-center md:text-left mb-4 text-white" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
+                      <h1 className="text-6xl md:text-7xl text-center md:text-left mb-4 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
                         Muhammad Abubakar
                       </h1>
-                      <p className="text-xl text-white/80 italic text-center md:text-left border-t border-white/20 pt-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                      <p className="text-xl text-gray-800 italic text-center md:text-left border-t border-gray-200 pt-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
                         Academic work and project documentation
                       </p>
                     </div>
                     
-                    <div className="prose prose-invert max-w-none">
-                      <p className="text-white/90 leading-relaxed text-justify" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                    <div className="prose max-w-none">
+                      <p className="text-gray-900 leading-relaxed text-justify" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1rem', lineHeight: 1.7, maxWidth: '70ch', margin: '0 auto' }}>
 This site documents academic, research, and organizational work referenced in my college applications. It includes project descriptions, timelines, and supporting materials.
 
 I am currently completing A-Level coursework in mathematics, physics, and computer science, alongside advanced studies in Islamic sciences and classical Arabic. My work includes technical education initiatives, debate and civic education programs, and independent research projects.                       </p>
                     </div>
                     
-                    <div className="flex gap-4 justify-center md:justify-start pt-4 border-t border-white/20">
-                      <a href="https://www.linkedin.com/in/muhammad-abubakar-300939312/" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/40 hover:bg-white/10 transition-all">
-                        <Linkedin className="w-5 h-5 text-white" />
+                    <div className="flex gap-4 justify-center md:justify-start pt-4 border-t border-gray-200">
+                      <a href="https://www.linkedin.com/in/muhammad-abubakar-300939312/" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
+                        <Linkedin className="w-5 h-5 text-gray-800" />
                       </a>
-                      <a href="https://github.com/devplotlib" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/40 hover:bg-white/10 transition-all">
-                        <Github className="w-5 h-5 text-white" />
+                      <a href="https://github.com/devplotlib" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
+                        <Github className="w-5 h-5 text-gray-800" />
                       </a>
-                      <a href="mailto:mailabubakar04@gmail.com" className="p-3 border border-white/40 hover:bg-white/10 transition-all">
-                        <Mail className="w-5 h-5 text-white" />
+                      <a href="mailto:mailabubakar04@gmail.com" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
+                        <Mail className="w-5 h-5 text-gray-800" />
                       </a>
                     </div>
                   </div>
@@ -351,24 +351,24 @@ I am currently completing A-Level coursework in mathematics, physics, and comput
               
               
                 
-                <div className="border border-white/20 p-8">
-                  <h3 className="text-2xl mb-6 text-white border-b border-white/20 pb-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
+                <div className="border border-gray-300 p-8 bg-gray-50 rounded-lg shadow-sm">
+                  <h3 className="text-2xl mb-6 text-gray-900 border-b border-gray-200 pb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
 Areas of Academic Interest                  </h3>
-                  <ul className="space-y-4 text-white/90" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem' }}>
+                  <ul className="space-y-4 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
                     <li className="flex items-start gap-3">
-                      <span className="text-white mt-1">•</span>
+                      <span className="text-gray-700 mt-1">•</span>
                       <span>Cognitive architectures in game systems</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-white mt-1">•</span>
+                      <span className="text-gray-700 mt-1">•</span>
                       <span>Computational linguistics and natural language processing</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-white mt-1">•</span>
+                      <span className="text-gray-700 mt-1">•</span>
                       <span>Rhetoric and persuasion in diplomatic contexts</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-white mt-1">•</span>
+                      <span className="text-gray-700 mt-1">•</span>
                       <span>Classical Islamic epistemology</span>
                     </li>
                   </ul>
@@ -380,8 +380,8 @@ Areas of Academic Interest                  </h3>
 {activeSection === 'Activities' && (
   <div className="space-y-10 animate-fade-in">
     <h2
-      className="text-5xl mb-10 text-white border-b border-white/20 pb-4"
-      style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}
+      className="text-5xl mb-10 text-gray-900 border-b border-gray-300 pb-4"
+      style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}
     >
       Activities
     </h2>
@@ -390,32 +390,32 @@ Areas of Academic Interest                  </h3>
       {activities.map((exp, index) => (
         <div
           key={index}
-          className="border border-white/20 p-8 hover:border-white/40 transition-all"
+          className={`border border-gray-300 p-8 transition-all ${index % 2 === 0 ? 'bg-gray-50 rounded-lg shadow-sm hover:shadow' : ''} hover:border-gray-400`}
         >
           <div className="flex items-start gap-6">
-            <div className="p-4 border border-white/30 text-white">
+            <div className="p-4 border border-gray-300 text-gray-800">
               {exp.icon}
             </div>
 
             <div className="flex-1">
               {/* Title */}
               <h3
-                className="text-2xl text-white mb-1"
-                style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}
+                className="text-2xl text-gray-900 mb-1"
+                style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}
               >
                 {exp.title}
               </h3>
 
               <p
-                className="text-white/90 text-lg"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+                className="text-gray-900 text-lg"
+                style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}
               >
                 {exp.company}
               </p>
 
               <p
-                className="text-sm text-white/60 italic mb-6"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+                className="text-sm text-gray-500 italic mb-6"
+                style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}
               >
                 {exp.period}
               </p>
@@ -423,8 +423,8 @@ Areas of Academic Interest                  </h3>
               {/* Overview */}
               {exp.overview && (
   <>
-    <p className="text-white/60 text-sm mb-1">overview</p>
-    <p className="text-white/80 mb-5 leading-relaxed">
+    <p className="text-gray-600 text-sm mb-1">overview</p>
+    <p className="text-gray-900 mb-5 leading-relaxed">
       {exp.overview}
     </p>
   </>
@@ -434,8 +434,8 @@ Areas of Academic Interest                  </h3>
               {/* Responsibilities */}
               {Array.isArray(exp.responsibilities) && exp.responsibilities.length > 0 && (
   <>
-    <p className="text-white/60 text-sm mb-1">responsibilities</p>
-    <ul className="list-disc list-inside text-white/80 mb-5 space-y-1">
+    <p className="text-gray-600 text-sm mb-1">responsibilities</p>
+    <ul className="list-disc list-inside text-gray-800 mb-5 space-y-1">
       {exp.responsibilities.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -447,8 +447,8 @@ Areas of Academic Interest                  </h3>
               {/* Scope & Scale */}
               {Array.isArray(exp.scope) && exp.scope.length > 0 && (
   <>
-    <p className="text-white/60 text-sm mb-1">scope & scale</p>
-    <ul className="list-disc list-inside text-white/80 mb-5 space-y-1">
+    <p className="text-gray-600 text-sm mb-1">scope & scale</p>
+    <ul className="list-disc list-inside text-gray-800 mb-5 space-y-1">
       {exp.scope.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -459,14 +459,14 @@ Areas of Academic Interest                  </h3>
               {/* Evidence */}
               {Array.isArray(exp.evidence) && exp.evidence.length > 0 && (
   <>
-    <p className="text-white/60 text-sm mb-1">evidence</p>
-    <ul className="list-disc list-inside text-white/80 space-y-1">
+    <p className="text-gray-600 text-sm mb-1">evidence</p>
+    <ul className="list-disc list-inside text-gray-900 space-y-1">
       {exp.evidence.map((item, i) => (
         <li key={i} className="flex items-start gap-2">
-  <Link className="w-4 h-4 mt-1 text-white/70 flex-shrink-0" />
+  <Link className="w-4 h-4 mt-1 text-gray-800 shrink-0" />
   <a
     href={item.link}
-    className="font-semibold underline underline-offset-4 hover:text-white transition-colors"
+    className="font-semibold underline underline-offset-4 hover:text-gray-900 transition-colors"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -491,25 +491,25 @@ Areas of Academic Interest                  </h3>
           {/* Skills Section */}
           {activeSection === 'skills' && (
             <div className="space-y-10 animate-fade-in">
-              <h2 className="text-5xl mb-10 text-white border-b border-white/20 pb-4" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
+              <h2 className="text-5xl mb-10 text-gray-900 border-b border-gray-200 pb-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
                 Core Competencies
               </h2>
               
               {['Technical Proficiency', 'Cognitive Sciences', 'Linguistics'].map(category => (
                 <div key={category} className="mb-10">
-                  <h3 className="text-3xl mb-6 text-white" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400', fontStyle: 'italic' }}>
+                  <h3 className="text-3xl mb-6 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400', fontStyle: 'italic' }}>
                     {category}
                   </h3>
                   <div className="space-y-6">
                     {skills.filter(s => s.category === category).map((skill, index) => (
-                      <div key={index} className="border border-white/20 p-6">
+                      <div key={index} className="border border-gray-200 p-6">
                         <div className="flex items-center justify-between mb-4">
-                          <span className="text-white text-lg" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{skill.name}</span>
-                          <span className="text-white text-sm" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{skill.level}%</span>
+                          <span className="text-gray-800 text-lg" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>{skill.name}</span>
+                          <span className="text-gray-700 text-sm" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>{skill.level}%</span>
                         </div>
-                        <div className="w-full bg-white/10 h-0.5">
+                        <div className="w-full bg-gray-300 h-0.5">
                           <div
-                            className="bg-white h-0.5 transition-all duration-1000"
+                            className="bg-gray-900 h-0.5 transition-all duration-1000"
                             style={{ width: `${skill.level}%` }}
                           ></div>
                         </div>
@@ -519,11 +519,11 @@ Areas of Academic Interest                  </h3>
                 </div>
               ))}
 
-              <div className="border border-white/20 p-8 mt-10">
-                <h3 className="text-2xl mb-6 text-white" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>Technical Proficiencies</h3>
+              <div className="border border-gray-300 p-8 mt-10 bg-gray-50 rounded-lg shadow-sm">
+                <h3 className="text-2xl mb-6 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Technical Proficiencies</h3>
                 <div className="flex flex-wrap gap-4">
                   {['Unity Engine', 'C# Programming', 'React Framework', 'Python', 'Game Design Theory', 'Robotics', 'Diplomatic Protocol'].map((tech, i) => (
-                    <span key={i} className="px-5 py-2 border border-white/30 text-white hover:bg-white/10 transition-all" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+                    <span key={i} className="px-5 py-2 border border-gray-300 text-gray-700 hover:bg-gray-200 transition-all" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
                       {tech}
                     </span>
                   ))}
@@ -535,23 +535,23 @@ Areas of Academic Interest                  </h3>
           {/* Achievements Section */}
           {activeSection === 'achievements' && (
             <div className="space-y-10 animate-fade-in">
-              <h2 className="text-5xl mb-10 text-white border-b border-white/20 pb-4" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
+              <h2 className="text-5xl mb-10 text-gray-900 border-b border-gray-200 pb-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
                 Honors & Distinctions
               </h2>
               
               {['Academic Distinction', 'Oratory Excellence', 'Religious Studies', 'Leadership'].map(category => (
                 <div key={category} className="mb-10">
-                  <h3 className="text-3xl mb-6 text-white" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400', fontStyle: 'italic' }}>
+                  <h3 className="text-3xl mb-6 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400', fontStyle: 'italic' }}>
                     {category}
                   </h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     {achievements.filter(a => a.category === category).map((achievement, index) => (
                       <div
                         key={index}
-                        className="border border-white/20 p-6 hover:border-white/40 transition-all"
+                        className="border border-gray-200 p-6 hover:border-gray-300 transition-all"
                       >
-                        <p className="text-white flex items-start gap-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem' }}>
-                          <span className="text-white mt-1">•</span>
+                        <p className="text-gray-900 flex items-start gap-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
+                          <span className="text-gray-900 mt-1">•</span>
                           <span>{achievement.text}</span>
                         </p>
                       </div>
@@ -560,24 +560,24 @@ Areas of Academic Interest                  </h3>
                 </div>
               ))}
 
-              <div className="border border-white/20 p-10 mt-10">
-                <h3 className="text-3xl mb-8 text-white border-b border-white/20 pb-4" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>
+              <div className="border border-gray-300 p-10 mt-10 bg-gray-50 rounded-lg shadow-sm">
+                <h3 className="text-3xl mb-8 text-gray-900 border-b border-gray-200 pb-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
                   Educational Background
                 </h3>
                 <div className="space-y-8">
-                  <div className="border-l-2 border-white pl-8">
-                    <h4 className="text-2xl text-white mb-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>Lahore Grammar School</h4>
-                    <p className="text-white/90 mb-2 leading-relaxed" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem' }}>
+                  <div className="border-l-2 border-gray-200 pl-8">
+                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Lahore Grammar School</h4>
+                    <p className="text-gray-800 mb-2 leading-relaxed" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
                       Advanced Level Examinations: Mathematics, Further Mathematics, Physics, Computer Science
                     </p>
-                    <p className="text-sm text-white/60 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>August 2024 – May 2026</p>
+                    <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>August 2024 – May 2026</p>
                   </div>
-                  <div className="border-l-2 border-white pl-8">
-                    <h4 className="text-2xl text-white mb-3" style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: '400' }}>Anwaar e Madinah</h4>
-                    <p className="text-white/90 mb-2 leading-relaxed" style={{ fontFamily: '"Times New Roman", Times, serif', fontSize: '1.05rem' }}>
+                  <div className="border-l-2 border-gray-200 pl-8">
+                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Anwaar e Madinah</h4>
+                    <p className="text-gray-800 mb-2 leading-relaxed" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
                       Master of Arts in Islamic Sciences • Master of Arts in Classical Arabic Language
                     </p>
-                    <p className="text-sm text-white/60 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>2020 – 2028</p>
+                    <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>2020 – 2028</p>
                   </div>
                 </div>
               </div>
@@ -587,18 +587,20 @@ Areas of Academic Interest                  </h3>
       </div>
 
       {/* Footer */}
-      <footer className="relative border-t border-white/20 mt-20 py-10 bg-black">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white/70">
-          <p className="mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+      <footer className="relative border-t border-gray-300 mt-20 py-10 bg-transparent">
+        <div className="max-w-4xl mx-auto px-6 text-center text-gray-600">
+          <p className="mb-2" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', color: '#1f2937' }}>
             © 2025 Muhammad Abubakar. All rights reserved.
           </p>
-          <p className="text-sm text-white/50 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+          <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
             Computational Sciences • Cognitive Research • Islamic Scholarship
           </p>
         </div>
       </footer>
 
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
