@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Code, Trophy, Briefcase, BookOpen, Zap, Terminal, Star, Github, Linkedin, Mail, Coffee, Link } from 'lucide-react';
+import { Code, Trophy, Briefcase, BookOpen, Zap, Terminal, Star, Github, Linkedin, Instagram, Mail, Coffee, Link } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -74,7 +74,7 @@ const Portfolio = () => {
       evidence: [
         {
           label: "Published paper (Journal of Applied Linguistics and TESOL)",
-          link: "/assets/JALT+290.pdf"
+          link: "/assets/JALT-290.pdf"
         },
         {
           label: "Abstract and citation information",
@@ -138,6 +138,10 @@ const Portfolio = () => {
       responsibilities: ["Co-designed the system architecture and user flow for a guidance-first admissions support tool", "Implemented AI-assisted features to organize application requirements, deadlines, and decision pathways across regions", "Explicitly constrained the system to avoid predictive or ranking-based admissions outputs", "Iterated on platform design based on user testing and hackathon feedback"],
       scope: ["Evaluated in competitive hackathon settings; ranked Top-5 globally and 1st nationally", "Covered application requirements across multiple regions and admissions systems (e.g., U.S., U.K., international pathways)", "Modeled application timelines, document dependencies, and decision points across divergent systems", "Designed with a primary focus on students without access to private college counseling"],
       evidence: [
+        {
+          label: "Try the web app",
+          link: "https://launchpad-for-college.vercel.app/"
+        },
         {
           label: "Hackathon certificates and rankings (Top-5 global; 1st nationally)",
           link: "#"
@@ -340,9 +344,9 @@ I am currently completing A-Level coursework in mathematics, physics, and comput
                       <a href="https://www.linkedin.com/in/muhammad-abubakar-300939312/" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
                         <Linkedin className="w-5 h-5 text-gray-800" />
                       </a>
-                      <a href="https://github.com/devplotlib" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
-                        <Github className="w-5 h-5 text-gray-800" />
-                      </a>
+                      {/* <a href="https://instagram.com/_m_abubakar._" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
+                        <Instagram className="w-5 h-5 text-gray-800" />
+                      </a> */}
                       <a href="mailto:mailabubakar04@gmail.com" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
                         <Mail className="w-5 h-5 text-gray-800" />
                       </a>
@@ -361,19 +365,19 @@ Areas of Academic Interest                  </h3>
                   <ul className="space-y-4 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
                     <li className="flex items-start gap-3">
                       <span className="text-gray-700 mt-1">•</span>
-                      <span>Cognitive architectures in game systems</span>
+                      <span>How learners form, misjudge, and revise mental models in complex domains</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-gray-700 mt-1">•</span>
-                      <span>Computational linguistics and natural language processing</span>
+                      <span>Language as a system: structure, ambiguity, interpretation, and use in human and machine contexts</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-gray-700 mt-1">•</span>
-                      <span>Rhetoric and persuasion in diplomatic contexts</span>
+                      <span>Instructional design and feedback timing in AI-mediated and human-guided learning</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-gray-700 mt-1">•</span>
-                      <span>Classical Islamic epistemology</span>
+                      <span>Computational approaches to modeling reasoning, knowledge representation, and learning processes</span>
                     </li>
                   </ul>
                 </div>
