@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Trophy, Briefcase, BookOpen, Zap, Terminal, Star, Github, Linkedin, Instagram, Mail, Coffee, Link } from 'lucide-react';
 
+
+
+
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [terminalText, setTerminalText] = useState('');
+  const [activityQuery, setActivityQuery] = useState('');
   const fullText = 'APPLICATION SUPPORTING MATERIALS: Muhammad Abubakar';
 
   useEffect(() => {
@@ -243,6 +247,15 @@ const Portfolio = () => {
     }
   ];
 
+  const filteredActivities = activities.filter(exp => {
+  const q = activityQuery.toLowerCase();
+  return (
+    exp.title.toLowerCase().includes(q) ||
+    exp.company.toLowerCase().includes(q) ||
+    (exp.overview && exp.overview.toLowerCase().includes(q))
+  );
+});
+
   const skills = [
     { name: 'Unity & C# Development', level: 95, category: 'Technical Proficiency' },
     { name: 'Game Systems Architecture', level: 90, category: 'Technical Proficiency' },
@@ -328,7 +341,7 @@ const Portfolio = () => {
                       <h1 className="text-6xl md:text-7xl text-center md:text-left mb-4 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
                         Muhammad Abubakar
                       </h1>
-                      <p className="text-xl text-gray-800 italic text-center md:text-left border-t border-gray-200 pt-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
+                      <p className="text-xl text-gray-800 text-center md:text-left border-t border-gray-200 pt-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
                         Academic work and project documentation
                       </p>
                     </div>
@@ -394,8 +407,30 @@ Areas of Academic Interest                  </h3>
       Activities
     </h2>
 
+    <div className="mb-8">
+  <input
+    type="text"
+    placeholder="Search activities (e.g., research, Jamia, NLP)"
+    value={activityQuery}
+    onChange={(e) => setActivityQuery(e.target.value)}
+    className="
+      w-full
+      border border-gray-300
+      bg-white
+      px-4 py-3
+      text-gray-900
+      placeholder-gray-500
+      focus:outline-none
+      focus:border-gray-500
+    "
+    style={{
+      fontFamily: '"Literata", "Times New Roman", Times, serif'
+    }}
+  />
+</div>
+
     <div className="space-y-8">
-      {activities.map((exp, index) => (
+      {filteredActivities.map((exp, index) => (
         <div
           key={index}
           className={`bg-white border border-black/10 p-8 transition-all ${index % 2 === 0 ? 'bg-gray-50 rounded-lg shadow-sm hover:shadow' : ''} hover:border-gray-400`}
@@ -491,6 +526,11 @@ Areas of Academic Interest                  </h3>
           </div>
         </div>
       ))}
+      {filteredActivities.length === 0 && (
+  <p className="text-gray-600">
+    No activities match your search.
+  </p>
+)}
     </div>
   </div>
 )}
