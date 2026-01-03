@@ -249,14 +249,18 @@ const Portfolio = () => {
   ];
 
   const achievements = [
+    { text: 'IMMC International Selection (Reserve), Pakistan Team', category: 'Academic Distinction'},
+    { text: 'National Award-Winning Mathematical Modeling Paper', category: 'Academic Distinction'},
     { text: 'Valedictorian, Class of 2024', category: 'Academic Distinction' },
     { text: 'Full Academic Scholarship (Merit-Based)', category: 'Academic Distinction' },
-    { text: 'PMMC Gold Medal Recipient', category: 'Academic Distinction' },
-    { text: 'All-Pakistan Debate Tournament Semi-Finalist', category: 'Oratory Excellence' },
-    { text: 'Hafiz-e-Quran (Complete Quranic Memorization)', category: 'Religious Studies' },
+    { text: 'Ranked Top-3 Nationally; All-Pakistan Debate Tournament Semi-Finalist', category: 'Oratory Excellence' },
+    { text: "Commissioner’s Oratory Excellence Award; Advocacy on Girls’ Education & Cognitive Development", category: 'Oratory Excellence'},
+    { text: "Student of the Year", category: "Academic Distinction" },
+    { text: "Principal’s Honor Roll; Recognized For Outstanding Extracurricular and Academic Excellence", category: "Academic Distinction"},
+    { text: "Deputy Head Boy", category: "Leadership"},
+    { text: "Head Prefect (Student Council)", category: "Leadership"},
     { text: 'Vice President, Information Technology Society', category: 'Leadership' },
     { text: 'Founder, Robotics Club', category: 'Leadership' },
-    { text: 'Deputy Head Boy', category: 'Leadership' }
   ];
 
   const NavButton = ({ section, icon: Icon, label }) => (
@@ -275,7 +279,7 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f8f7f3', color: '#111827', fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '16px', lineHeight: 1.7 }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#eef1f4', color: '#0f172a', fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '16px', lineHeight: 1.7 }}>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-[#f3f4f6] border-b border-gray-300 shadow-sm z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -285,8 +289,8 @@ const Portfolio = () => {
           <div className="flex gap-1">
             <NavButton section="home" icon={Terminal} label="Overview" />
             <NavButton section="Activities" icon={Briefcase} label="Activities" />
-            <NavButton section="skills" icon={Code} label="Competencies" />
-            <NavButton section="achievements" icon={Trophy} label="Distinctions" />
+            {/* <NavButton section="skills" icon={Code} label="Competencies" /> */}
+            <NavButton section="achievements" icon={Trophy} label="Honors" />
           </div>
         </div>
       </nav>
@@ -390,7 +394,7 @@ Areas of Academic Interest                  </h3>
       {activities.map((exp, index) => (
         <div
           key={index}
-          className={`border border-gray-300 p-8 transition-all ${index % 2 === 0 ? 'bg-gray-50 rounded-lg shadow-sm hover:shadow' : ''} hover:border-gray-400`}
+          className={`bg-white border border-black/10 p-8 transition-all ${index % 2 === 0 ? 'bg-gray-50 rounded-lg shadow-sm hover:shadow' : ''} hover:border-gray-400`}
         >
           <div className="flex items-start gap-6">
             <div className="p-4 border border-gray-300 text-gray-800">
@@ -488,7 +492,7 @@ Areas of Academic Interest                  </h3>
 )}
 
 
-          {/* Skills Section */}
+          {/* Skills Section
           {activeSection === 'skills' && (
             <div className="space-y-10 animate-fade-in">
               <h2 className="text-5xl mb-10 text-gray-900 border-b border-gray-200 pb-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
@@ -530,7 +534,7 @@ Areas of Academic Interest                  </h3>
                 </div>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Achievements Section */}
           {activeSection === 'achievements' && (
@@ -539,26 +543,57 @@ Areas of Academic Interest                  </h3>
                 Honors & Distinctions
               </h2>
               
-              {['Academic Distinction', 'Oratory Excellence', 'Religious Studies', 'Leadership'].map(category => (
-                <div key={category} className="mb-10">
-                  <h3 className="text-3xl mb-6 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400', fontStyle: 'italic' }}>
-                    {category}
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {achievements.filter(a => a.category === category).map((achievement, index) => (
-                      <div
-                        key={index}
-                        className="border border-gray-200 p-6 hover:border-gray-300 transition-all"
-                      >
-                        <p className="text-gray-900 flex items-start gap-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
-                          <span className="text-gray-900 mt-1">•</span>
-                          <span>{achievement.text}</span>
-                        </p>
-                      </div>
-                    ))}
+              {['Academic Distinction', 'Leadership', 'Oratory Excellence'].map(category => (
+                  <div
+                    key={category}
+                    className="bg-white border border-black/10 rounded-lg p-8 mb-10"
+                  >
+                    {/* Subsection heading INSIDE the card */}
+                    <h3
+                      className="text-3xl mb-6 text-gray-900"
+                      style={{
+                        fontFamily: '"Literata", "Times New Roman", Times, serif',
+                        fontWeight: '400',
+                        fontStyle: 'italic'
+                      }}
+                    >
+                      {category}
+                    </h3>
+
+                    {/* Achievements list */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {achievements
+                        .filter(a => a.category === category)
+                        .map((achievement, index) => (
+                          <div
+                            key={index}
+                            className="
+  bg-[#f9fafb]
+  border border-black/10
+  rounded-md
+  px-4 py-3
+  transition-all duration-150
+  hover:border-black/20
+  hover:bg-white
+  hover:-translate-y-[1px]
+"
+                          >
+                            <p
+                              className="text-gray-900 flex items-start gap-3"
+                              style={{
+                                fontFamily: '"Literata", "Times New Roman", Times, serif',
+                                fontSize: '1.05rem'
+                              }}
+                            >
+                              <span className="mt-1">•</span>
+                              <span>{achievement.text}</span>
+                            </p>
+                          </div>
+                        ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+
 
               <div className="border border-gray-300 p-10 mt-10 bg-gray-50 rounded-lg shadow-sm">
                 <h3 className="text-3xl mb-8 text-gray-900 border-b border-gray-200 pb-4" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
@@ -566,18 +601,18 @@ Areas of Academic Interest                  </h3>
                 </h3>
                 <div className="space-y-8">
                   <div className="border-l-2 border-gray-200 pl-8">
-                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Lahore Grammar School</h4>
+                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Lahore Grammar School for Senior Boys</h4>
                     <p className="text-gray-800 mb-2 leading-relaxed" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
-                      Advanced Level Examinations: Mathematics, Further Mathematics, Physics, Computer Science
+                      Advanced Level Subjects: Mathematics, Physics, Computer Science
                     </p>
                     <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>August 2024 – May 2026</p>
                   </div>
                   <div className="border-l-2 border-gray-200 pl-8">
-                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Anwaar e Madinah</h4>
+                    <h4 className="text-2xl text-gray-900 mb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>Lahore Grammar School Shalimar Campus</h4>
                     <p className="text-gray-800 mb-2 leading-relaxed" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
-                      Master of Arts in Islamic Sciences • Master of Arts in Classical Arabic Language
+                      O Level Subjects: English, Urdu, Mathematics, Additional Mathematics, Physics, Chemistry, Global Perspectives & Research, Islamiyat, Computer Science, Pakistan 
                     </p>
-                    <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>2020 – 2028</p>
+                    <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>August 2008 – May 2024</p>
                   </div>
                 </div>
               </div>
@@ -593,7 +628,7 @@ Areas of Academic Interest                  </h3>
             © 2025 Muhammad Abubakar. All rights reserved.
           </p>
           <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
-            Computational Sciences • Cognitive Research • Islamic Scholarship
+            Cognitive Science • Linguistics • Computational Science
           </p>
         </div>
       </footer>
