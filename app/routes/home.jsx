@@ -55,17 +55,9 @@ const Portfolio = () => {
       responsibilities: ["Designed and executed an independent research framework to study confidence–competence gaps in learning", "Constructed a longitudinal archive of anonymized learner errors drawn from both AI-assisted and human-guided instruction", "Tracked confidence indicators alongside performance to identify patterns of overconfidence, transfer failure, and misconception persistence", "Analyzed how feedback timing and perceived AI fluency influence learners’ willingness to revise incorrect mental models", "Refined analytical framing through design-review–style discussions with a senior software engineer"],
       scope: ["Multi-context dataset spanning repeated learner interactions over time", "Longitudinal analysis focused on error persistence rather than one-off performance"],
       evidence: [{
-        label: "Dataset schema and anonymization protocol",
-        link: "#"
-      },
-    {
-      label: "Coding framework for error and confidence classification",
-      link: "#"
-    },
-  {
-    label: "Analytical notes and draft manuscript excerpts",
-    link: "#"
-  }]
+        label: "View GitHub repo (schema, anonymization protocol, coding framework, analytical notes, manuscript excerpts)",
+        link: "https://github.com/devplotlib/illusion-of-mastery-dataset"
+      }]
     },
     {
       title: 'Published Research',
