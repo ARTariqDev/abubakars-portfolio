@@ -41,8 +41,8 @@ const Portfolio = () => {
           link: "#"
         },
         {
-          label: "Event Recap Video (Recommended Watch :P)",
-          link: "#"
+          label: "Pakathon x Innoventions Event (Recommended Watch :P)",
+          link: "https://youtu.be/uSPjZ6m45bM"
         }
       ]
     },
@@ -97,7 +97,7 @@ const Portfolio = () => {
         },
         {
           label: "Documentary final cut",
-          key: "#"
+          key: "https://youtu.be/EEy6vvzaiFg"
         }
       ]
         
@@ -113,11 +113,11 @@ const Portfolio = () => {
       evidence: [
         {
           label: "Code excerpts and pipeline diagrams",
-          link: "#"
+          link: "/assets/Code excerpts and pipeline diagrams.pdf"
         },
         {
           label: "Documentation of preprocessing and analysis methods",
-          link: "#"
+          link: "/assets/Documentation of preprocessing and analysis methods.pdf"
         },
         {
           label: "Sample outputs illustrating concept mapping and structural patterns",
