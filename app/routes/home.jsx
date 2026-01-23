@@ -121,7 +121,7 @@ const Portfolio = () => {
         },
         {
           label: "Sample outputs illustrating concept mapping and structural patterns",
-          link: "#"
+          link: "/assets/Sample_Outputs.pdf"
         }
       ]
     },
@@ -139,16 +139,12 @@ const Portfolio = () => {
           link: "https://launchpad-for-college.vercel.app/"
         },
         {
-          label: "Hackathon certificates and rankings (Top-5 global; 1st nationally)",
-          link: "#"
-        },
-        {
           label: "Platform demo video",
-          link: "#"
+          link: "https://youtu.be/EkisuMDopUk"
         },
         {
           label: "Devpost link",
-          link: "#"
+          link: "https://devpost.com/software/launchpad-7xkjwu"
         }
       ]
     },
@@ -185,7 +181,7 @@ const Portfolio = () => {
           link: "#"
         },
         {
-          label: "Program documentation or school acknowledgment",
+          label: "School acknowledgment",
           link: "#"
         }
       ]
