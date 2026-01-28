@@ -25,28 +25,6 @@ const Portfolio = () => {
 
   const activities = [
     {
-      title: 'Founder & President',
-      company: 'Pakathon × LGS JT IT Society',
-      period: '2023 – Present',
-      icon: <Zap className="w-5 h-5" />,
-      overview: "Pakathon is a multi-year computer science education and hackathon initiative designed to introduce secondary-level students to foundational programming and computational thinking. The program combines scaffolded instruction, peer-led teaching, and project-based problem solving, with the goal of lowering entry barriers to technical learning in a school context where formal CS exposure is uneven.",
-      responsibilities: ["Founded and led the initiative from conception to execution", "Authored a scaffolded modular introductory computer science curriculum, structured to move students from basic syntax and logic to applied problem-solving and projects", "Designed and implemented a peer-instructor model", "Planned and executed hackathon-style learning events to reinforce instruction through collaborative, time-bound project work"],
-      scope: ["Reached 300+ students across multiple cohorts and academic years", "Trained 40+ peer instructors responsible for small-group teaching and mentorship", "Operated as a sustained, multi-year initiative rather than a one-off workshop or competition"],
-      evidence: [{
-          label: "Curriculum documents and lesson materials",
-          link: "#"
-        },
-        {
-          label: "Photographs from instructional sessions and hackathon events",
-          link: "#"
-        },
-        {
-          label: "Pakathon x Innoventions Event (Recommended Watch :P)",
-          link: "https://youtu.be/uSPjZ6m45bM"
-        }
-      ]
-    },
-    {
       title: 'Illusion of Mastery Project (Self-Directed)',
       company: 'Founder & Researcher',
       period: 'August 2025',
@@ -89,15 +67,15 @@ const Portfolio = () => {
       evidence: [
         {
           label: "Session outlines and facilitation guides",
-          key: "#"
+          link: "#"
         },
         {
           label: "Session photographs",
-          key: "#"
+          link: "#"
         },
         {
           label: "Documentary final cut",
-          key: "https://youtu.be/EEy6vvzaiFg"
+          link: "https://youtu.be/EEy6vvzaiFg"
         }
       ]
         
@@ -122,6 +100,28 @@ const Portfolio = () => {
         {
           label: "Sample outputs illustrating concept mapping and structural patterns",
           link: "/assets/Sample_Outputs.pdf"
+        }
+      ]
+    },
+    {
+      title: 'Founder & President',
+      company: 'Pakathon × LGS JT IT Society',
+      period: '2023 – Present',
+      icon: <Zap className="w-5 h-5" />,
+      overview: "Pakathon is a multi-year computer science education and hackathon initiative designed to introduce secondary-level students to foundational programming and computational thinking. The program combines scaffolded instruction, peer-led teaching, and project-based problem solving, with the goal of lowering entry barriers to technical learning in a school context where formal CS exposure is uneven.",
+      responsibilities: ["Founded and led the initiative from conception to execution", "Authored a scaffolded modular introductory computer science curriculum, structured to move students from basic syntax and logic to applied problem-solving and projects", "Designed and implemented a peer-instructor model", "Planned and executed hackathon-style learning events to reinforce instruction through collaborative, time-bound project work"],
+      scope: ["Reached 300+ students across multiple cohorts and academic years", "Trained 40+ peer instructors responsible for small-group teaching and mentorship", "Operated as a sustained, multi-year initiative rather than a one-off workshop or competition"],
+      evidence: [{
+          label: "Curriculum documents and lesson materials",
+          link: "#"
+        },
+        {
+          label: "Photographs from instructional sessions and hackathon events",
+          link: "#"
+        },
+        {
+          label: "Pakathon x Innoventions Event (Recommended Watch :P)",
+          link: "https://youtu.be/uSPjZ6m45bM"
         }
       ]
     },
@@ -159,7 +159,7 @@ const Portfolio = () => {
       evidence: [
         {
           label: "Appointment Letter",
-          link: "#"
+          link: "/assets/Appointment Letter.pdf"
         }
       ]
     },
@@ -182,7 +182,7 @@ const Portfolio = () => {
         },
         {
           label: "School acknowledgment",
-          link: "#"
+          link: "/assets/ROBOTICS CERT.pdf"
         }
       ]
     },
@@ -224,7 +224,7 @@ const Portfolio = () => {
       evidence: [
         {
           label: "Appointment",
-          link: "#"
+          link: "/assets/deputy.png"
         },
         {
           label: "Event programs and administrative acknowledgments",
