@@ -111,14 +111,7 @@ const Portfolio = () => {
       overview: "Pakathon is a multi-year computer science education and hackathon initiative designed to introduce secondary-level students to foundational programming and computational thinking. The program combines scaffolded instruction, peer-led teaching, and project-based problem solving, with the goal of lowering entry barriers to technical learning in a school context where formal CS exposure is uneven.",
       responsibilities: ["Founded and led the initiative from conception to execution", "Authored a scaffolded modular introductory computer science curriculum, structured to move students from basic syntax and logic to applied problem-solving and projects", "Designed and implemented a peer-instructor model", "Planned and executed hackathon-style learning events to reinforce instruction through collaborative, time-bound project work"],
       scope: ["Reached 300+ students across multiple cohorts and academic years", "Trained 40+ peer instructors responsible for small-group teaching and mentorship", "Operated as a sustained, multi-year initiative rather than a one-off workshop or competition"],
-      evidence: [{
-          label: "Curriculum documents and lesson materials",
-          link: "#"
-        },
-        {
-          label: "Photographs from instructional sessions and hackathon events",
-          link: "#"
-        },
+      evidence: [
         {
           label: "Pakathon x Innoventions Event (Recommended Watch :P)",
           link: "https://youtu.be/uSPjZ6m45bM"
@@ -173,14 +166,6 @@ const Portfolio = () => {
       scope: ["Grew the society from 0 to 50+ active student members across cohorts", "Multi-week instructional cycles culminating in hardware projects", "Consistently winning in local robotics competitions"],
       evidence: [
         {
-          label: "Curriculum outlines and lesson materials",
-          link: "#"
-        },
-        {
-          label: "Photographs of student-built projects",
-          link: "#"
-        },
-        {
           label: "School acknowledgment",
           link: "/assets/ROBOTICS CERT.pdf"
         }
@@ -225,10 +210,6 @@ const Portfolio = () => {
         {
           label: "Appointment",
           link: "/assets/deputy.png"
-        },
-        {
-          label: "Event programs and administrative acknowledgments",
-          link: "#"
         }
       ]
 
