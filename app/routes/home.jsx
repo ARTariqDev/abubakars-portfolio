@@ -341,7 +341,7 @@ I am currently completing A-Level coursework in mathematics, physics, and comput
               
               
                 
-                <div className="border border-gray-300 p-8 bg-gray-50 rounded-lg shadow-sm">
+                {/* <div className="border border-gray-300 p-8 bg-gray-50 rounded-lg shadow-sm">
                   <h3 className="text-2xl mb-6 text-gray-900 border-b border-gray-200 pb-3" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontWeight: '400' }}>
 Areas of Academic Interest                  </h3>
                   <ul className="space-y-4 text-gray-900" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', fontSize: '1.05rem' }}>
@@ -362,7 +362,7 @@ Areas of Academic Interest                  </h3>
                       <span>Computational approaches to modeling reasoning, knowledge representation, and learning processes</span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
           )}
 
@@ -640,9 +640,7 @@ Areas of Academic Interest                  </h3>
           <p className="mb-2" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif', color: '#1f2937' }}>
             © 2025 Muhammad Abubakar. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500 italic" style={{ fontFamily: '"Literata", "Times New Roman", Times, serif' }}>
-            Cognitive Science • Linguistics • Computational Science
-          </p>
+          
         </div>
       </footer>
 
