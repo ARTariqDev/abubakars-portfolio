@@ -323,9 +323,9 @@ I am currently completing A-Level coursework in mathematics, physics, and comput
                     </div>
                     
                     <div className="flex gap-4 justify-center md:justify-start pt-4 border-t border-gray-200">
-                      <a href="https://www.linkedin.com/in/muhammad-abubakar-300939312/" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
+                      {/* <a href="https://www.linkedin.com/in/muhammad-abubakar-300939312/" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
                         <Linkedin className="w-5 h-5 text-gray-800" />
-                      </a>
+                      </a> */}
                       {/* <a href="https://instagram.com/_m_abubakar._" target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-300 hover:bg-gray-100 transition-all">
                         <Instagram className="w-5 h-5 text-gray-800" />
                       </a> */}
